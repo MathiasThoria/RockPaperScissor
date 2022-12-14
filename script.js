@@ -1,7 +1,3 @@
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-
 
 //this function takes playerSelection and computerSelection strings
 //and returns a string with the result of the match
@@ -39,22 +35,29 @@ function playRound(playerSelection, computerSelection) {
 //this function returns a random string between s,r and p
 function getComputerChoice(){
     let rand = Math.random();
-    console.log(rand)
+    console.log(rand);
     if (rand < 0.3) {
-        return "Scissors";
+        return "scissors";
     } else if (rand < 0.6) {
-        return "Rock";
+        return "rock";
     } else {
-        return "Paper";
+        return "paper";
     }
 }
 
 function game(){
     let cont = 0;
+    let playerSelectionString = "";
     let whowin = "";
+    //round of 5 games
     for (let i=0; i<5; i++){
-        whowin = playRound(prompt("Scissors, Paper or Rock?"),computerSelection());
-        if (whowin.includes("win")) {
+        //variable needed to lower case later
+        playerSelectionString = prompt("Scissors, Paper or Rock?");
+        //varieble to use .includes method
+        whowin = playRound(playerSelectionString.toLocaleLowerCase(),getComputerChoice());
+        console.log(whowin);
+
+        if (whowin.includes("win")) {            
             cont++;
         } else if(whowin.includes("lose")){
             cont--;
@@ -65,6 +68,8 @@ function game(){
     if (cont<3){
         console.log("Loooooooooser");        
     }else{
-        console.log("Ok, you win")
+        console.log("Ok, you win");
     }
 }
+
+game();
