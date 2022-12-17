@@ -1,4 +1,4 @@
-
+const SCISSOR = "&#9986"
 //this function takes playerSelection and computerSelection strings
 //and returns a string with the result of the match
 function playRound(playerSelection, computerSelection) {
@@ -72,4 +72,4 @@ function game(){
     }
 }
 
-game();
+//game();
