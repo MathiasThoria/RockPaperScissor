@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+div, button{
+    font-family: 'Roboto', monospace;
+    font-size: 22px;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body, .conteinerHeader, .conteinerContentA, 
+.conteinerContentB, .conteinerContentC{
+    display: flex; 
+    
+}
+
+div{   
+    align-items: center;
+    border: 2px;
+    border-style: double; 
+    border-color:rgb(172, 165, 165);
+    border-radius: 10px;
+    padding:15px;
+    gap:10px;
+    margin-bottom: 10px;
+    text-align:center;
+}
+div .text{
+    border: 0px;
+}
+
+ul{
+    list-style-type: none;    
+    text-align: center;
+    padding: 0px 30px;
+}
+.conteinerAll{       
+    text-align: center;            
+}
+
+.result{
+    flex:1;
+    text-align:center;
+}
+
+.text, .reset{
+    width: 150px;
+}
+.conteinerHeader{
+    margin:15px;
+}
+.scissor, .rock, .paper {
+    font-size: 30px;
+    flex:1;
+    align-items: center;
+    width: 80px;
+    gap: 40px;
+}
+button{    
+    background-color: rgb(127, 225, 255);
+    border: 0;
+    border-radius: 12px;
+    padding:15px;    
+}
+.conteinerHeader{
+    justify-content: space-evenly;
+}
+.reset{
+    background-color: tomato;
+}
+.pcSelection{
+    flex:1;
+}
+.conteinerContentA > button {
+    font-size: 40px;
+}
